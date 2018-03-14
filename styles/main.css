@@ -1,0 +1,1850 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Museo Cyrl 900';
+  src: url("../fonts/MuseoCyrl-900.eot");
+  src: url("../fonts/MuseoCyrl-900.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoCyrl-900.woff2") format("woff2"), url("../fonts/MuseoCyrl-900.woff") format("woff"), url("../fonts/MuseoCyrl-900.ttf") format("truetype"), url("../fonts/MuseoCyrl-900.svg#MuseoCyrl-900") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo Cyrl 700';
+  src: url("../fonts/MuseoCyrl-700.eot");
+  src: url("../fonts/MuseoCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoCyrl-700.woff2") format("woff2"), url("../fonts/MuseoCyrl-700.woff") format("woff"), url("../fonts/MuseoCyrl-700.ttf") format("truetype"), url("../fonts/MuseoCyrl-700.svg#MuseoCyrl-700") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo Cyrl 300';
+  src: url("../fonts/MuseoCyrl-300.eot");
+  src: url("../fonts/MuseoCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoCyrl-300.woff2") format("woff2"), url("../fonts/MuseoCyrl-300.woff") format("woff"), url("../fonts/MuseoCyrl-300.ttf") format("truetype"), url("../fonts/MuseoCyrl-300.svg#MuseoCyrl-300") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo Cyrl 500';
+  src: url("../fonts/MuseoCyrl-500.eot");
+  src: url("../fonts/MuseoCyrl-500.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoCyrl-500.woff2") format("woff2"), url("../fonts/MuseoCyrl-500.woff") format("woff"), url("../fonts/MuseoCyrl-500.ttf") format("truetype"), url("../fonts/MuseoCyrl-500.svg#MuseoCyrl-500") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo Cyrl 100';
+  src: url("../fonts/MuseoCyrl-100.eot");
+  src: url("../fonts/MuseoCyrl-100.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoCyrl-100.woff2") format("woff2"), url("../fonts/MuseoCyrl-100.woff") format("woff"), url("../fonts/MuseoCyrl-100.ttf") format("truetype"), url("../fonts/MuseoCyrl-100.svg#MuseoCyrl-100") format("svg");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/Lato-Light.woff") format("woff"), url("../fonts/Lato-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Heavy.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Heavy.woff2") format("woff2"), url("../fonts/Lato-Heavy.woff") format("woff"), url("../fonts/Lato-Heavy.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800; }
+
+* {
+  box-sizing: border-box;
+  outline: none; }
+
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  font-size: 16px;
+  overflow-x: hidden; }
+
+.clearfix:after {
+  clear: both;
+  display: table;
+  content: " "; }
+
+.clearfix:before {
+  clear: both;
+  display: table;
+  content: " "; }
+
+.container {
+  width: 1140px;
+  margin: 0 auto; }
+
+#mmenu {
+  display: none; }
+
+header {
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  padding-top: 30px;
+  background: url("../images/h_shadow.png") no-repeat top center; }
+  header .cols {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  header .logo {
+    margin-right: 50px; }
+  header .lang a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    margin-right: 10px;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+    transition: .2s; }
+    header .lang a:hover, header .lang a.active {
+      border-bottom: 2px solid #df3434; }
+  header .tel a {
+    color: #fff;
+    text-decoration: none;
+    display: block; }
+  header .tel .number {
+    font-size: 24px;
+    font-weight: 800; }
+  header .tel .callback {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    border-bottom: 1px solid #fff;
+    transition: .2s; }
+    header .tel .callback:hover {
+      border-bottom: 1px solid transparent; }
+  header .mmenu {
+    display: none; }
+  header .order {
+    margin-left: 30px; }
+    header .order .btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      padding: 0px 34px;
+      line-height: 50px;
+      box-shadow: 0 21px 31px 1px rgba(255, 0, 103, 0.42);
+      border-radius: 25px;
+      background-color: #ed0f69;
+      transition: .2s; }
+      header .order .btn:hover {
+        background-color: #d60d5e; }
+  header .menu {
+    display: table;
+    width: 100%;
+    box-shadow: 0 14px 31px 1px rgba(0, 28, 60, 0.25);
+    border-radius: 3px;
+    background-color: #fff;
+    height: 65px;
+    margin-top: 30px;
+    overflow: hidden; }
+    header .menu .item {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      color: #414042;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 0px 25px;
+      transition: .2s; }
+      header .menu .item:hover {
+        background: #f5f5f5; }
+      header .menu .item:last-child {
+        text-align: left;
+        width: 171px;
+        height: 65px;
+        padding-right: 30px;
+        color: #fff;
+        font-size: 13px;
+        padding-left: 55px;
+        background: #235b9e url("../images/fb.svg") no-repeat 23px 16px;
+        padding-top: 3px; }
+        header .menu .item:last-child:hover {
+          background: #1d518e url("../images/fb.svg") no-repeat 23px 16px; }
+
+#scene {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 664px;
+  z-index: -1; }
+
+.slider {
+  top: -10px; }
+  .slider .slide {
+    height: 570px; }
+    .slider .slide .slide_content {
+      padding-top: 85px;
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 0;
+      z-index: 2; }
+    .slider .slide .slide1 {
+      color: #fff; }
+      .slider .slide .slide1 .text1 {
+        font-size: 20px;
+        font-weight: 500;
+        z-index: 2;
+        position: relative; }
+      .slider .slide .slide1 .text2 {
+        font-family: 'Museo Cyrl 900', sans-serif;
+        font-size: 100px;
+        text-shadow: 0 14px 31px rgba(0, 28, 60, 0.61);
+        z-index: 2;
+        position: relative; }
+      .slider .slide .slide1 .text3 {
+        font-weight: 500;
+        font-size: 30px;
+        z-index: 2;
+        position: relative; }
+      .slider .slide .slide1 .btn {
+        display: inline-block;
+        margin-top: 30px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 800;
+        letter-spacing: 0.3px;
+        padding: 0px 47px;
+        line-height: 64px;
+        box-shadow: 0 21px 31px 1px rgba(255, 0, 103, 0.25), 0 6px 10px 1px rgba(255, 0, 120, 0.3);
+        border-radius: 32px;
+        background-color: #ed0f69;
+        z-index: 2;
+        position: relative;
+        transition: .2s; }
+        .slider .slide .slide1 .btn:hover {
+          background-color: #d60d5e; }
+      .slider .slide .slide1 .more {
+        display: inline-block;
+        margin-top: 30px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 800;
+        letter-spacing: 0.3px;
+        border-bottom: 1px solid #fff;
+        transition: .2s;
+        z-index: 2;
+        position: relative; }
+        .slider .slide .slide1 .more:hover {
+          border-bottom: 1px solid transparent; }
+      .slider .slide .slide1 img.top {
+        position: absolute;
+        top: 0;
+        display: initial;
+        width: initial;
+        left: -100px;
+        right: 0;
+        margin: 0 auto;
+        z-index: 0; }
+  .slider .owl-dots {
+    text-align: center;
+    position: absolute;
+    bottom: 110px;
+    width: 100%;
+    display: block; }
+    .slider .owl-dots .owl-dot {
+      display: inline-block;
+      margin: 0px 7px; }
+      .slider .owl-dots .owl-dot span {
+        display: block;
+        width: 13px;
+        height: 13px;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: .2s; }
+      .slider .owl-dots .owl-dot:hover span, .slider .owl-dots .owl-dot.active span {
+        background-color: #ed0f69; }
+  .slider .owl-nav {
+    text-align: center;
+    position: absolute;
+    top: 180px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+    display: block; }
+    .slider .owl-nav .owl-prev {
+      width: 81px;
+      height: 81px;
+      background: #fff url("../images/top_slide_arr.png") no-repeat center center;
+      border-radius: 50%;
+      left: 0;
+      top: 0;
+      transition: .2s; }
+      .slider .owl-nav .owl-prev:hover {
+        background: #ed0f69 url("../images/top_slide_arr.png") no-repeat center center; }
+    .slider .owl-nav .owl-next {
+      width: 81px;
+      height: 81px;
+      background: #fff url("../images/top_slide_arr.png") no-repeat center center;
+      border-radius: 50%;
+      transform: rotate(180deg);
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: .2s; }
+      .slider .owl-nav .owl-next:hover {
+        background: #ed0f69 url("../images/top_slide_arr.png") no-repeat center center; }
+
+.about {
+  text-align: right;
+  position: relative; }
+  .about .container {
+    position: relative; }
+  .about .right {
+    text-align: left;
+    width: 600px;
+    display: inline-block;
+    position: relative; }
+    .about .right .round {
+      width: 797px;
+      height: 797px;
+      background-color: #fff3e1;
+      border-radius: 50%;
+      position: absolute;
+      top: -275px;
+      left: -366px;
+      z-index: -2; }
+    .about .right .title {
+      color: #3c3c3c;
+      font-family: 'Museo Cyrl 700';
+      font-size: 50px;
+      margin-bottom: 20px; }
+    .about .right p {
+      font-size: 15px;
+      color: #000;
+      line-height: 24px;
+      margin: 0; }
+      .about .right p b {
+        font-weight: 700; }
+    .about .right ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .about .right ul li {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAACCAYAAACOoybuAAAAGklEQVQYV2N8y59xgYGBUZ+BMLjASLzi/xcBXdcHa7atG4AAAAAASUVORK5CYII=") no-repeat left 12px;
+        padding-left: 20px;
+        line-height: 24px; }
+    .about .right .bg2 {
+      margin-left: -250px;
+      margin-top: -250px;
+      position: relative;
+      z-index: -1; }
+    .about .right .table {
+      display: table;
+      margin-top: 25px; }
+      .about .right .table .item {
+        display: table-cell;
+        padding-right: 50px; }
+        .about .right .table .item .name {
+          font-size: 15px;
+          font-weight: 700;
+          margin-bottom: 2px; }
+        .about .right .table .item .result {
+          color: #ed0f69;
+          font-size: 40px;
+          font-family: 'Museo Cyrl 700'; }
+  .about .bg1 {
+    position: absolute;
+    top: -30px;
+    left: -340px; }
+
+.uah {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600; }
+
+.block_for_clients {
+  text-align: right;
+  position: relative;
+  margin-top: 10px; }
+  .block_for_clients .bg1 {
+    position: absolute;
+    left: -450px;
+    top: -80px;
+    z-index: 1; }
+  .block_for_clients .container {
+    position: relative; }
+  .block_for_clients .right {
+    text-align: left;
+    width: 600px;
+    display: inline-block;
+    position: relative; }
+    .block_for_clients .right .title {
+      color: #010101;
+      font-family: 'Museo Cyrl 700';
+      font-size: 50px;
+      margin-bottom: 10px; }
+    .block_for_clients .right p {
+      font-size: 18px;
+      line-height: 30px; }
+    .block_for_clients .right .block {
+      width: 671px;
+      padding-bottom: 155px;
+      border: 6px solid #ebebeb;
+      position: relative;
+      background: #fff;
+      margin-top: 50px;
+      margin-left: -77px;
+      padding-top: 50px;
+      padding-right: 60px; }
+      .block_for_clients .right .block:after {
+        content: '';
+        width: 26px;
+        height: 28px;
+        display: block;
+        background: url("../images/block_for_clients_arr.png") no-repeat center center;
+        position: absolute;
+        top: -28px;
+        left: 100px; }
+      .block_for_clients .right .block .line_arr {
+        height: 9px;
+        background: url("../images/line_arr.png") repeat-x;
+        margin-left: 80px;
+        position: relative;
+        z-index: 2; }
+      .block_for_clients .right .block .line1 {
+        margin-bottom: 40px; }
+        .block_for_clients .right .block .line1 .title {
+          padding-left: 80px;
+          color: #ed0f69;
+          font-size: 30px;
+          font-family: 'Museo Cyrl 700';
+          vertical-align: top; }
+          .block_for_clients .right .block .line1 .title .razm {
+            display: inline-block;
+            font-size: 12px;
+            font-family: 'Lato', sans-serif;
+            color: #000;
+            vertical-align: top;
+            margin-top: -10px;
+            max-width: 200px; }
+            .block_for_clients .right .block .line1 .title .razm span {
+              font-family: 'Museo Cyrl 100';
+              font-size: 70px;
+              display: block;
+              margin-bottom: -10px; }
+          .block_for_clients .right .block .line1 .title .text {
+            display: inline-block;
+            max-width: 400px;
+            margin-left: 10px; }
+        .block_for_clients .right .block .line1 .row {
+          margin-top: 20px;
+          padding-left: 180px; }
+          .block_for_clients .right .block .line1 .row .item {
+            display: inline-block;
+            margin-right: 20px; }
+            .block_for_clients .right .block .line1 .row .item .name {
+              font-size: 13px;
+              font-weight: 700;
+              margin-bottom: 5px; }
+            .block_for_clients .right .block .line1 .row .item .result {
+              font-family: 'Museo Cyrl 700';
+              font-size: 26px; }
+            .block_for_clients .right .block .line1 .row .item:last-child {
+              margin-right: 0; }
+      .block_for_clients .right .block .line2 {
+        margin-top: 40px;
+        padding-left: 80px;
+        position: relative;
+        z-index: 2; }
+        .block_for_clients .right .block .line2 .title {
+          color: #ed0f69;
+          font-size: 30px;
+          font-family: 'Museo Cyrl 700';
+          vertical-align: top; }
+        .block_for_clients .right .block .line2 .row {
+          margin-top: 20px; }
+          .block_for_clients .right .block .line2 .row .item {
+            display: inline-block;
+            margin-right: 25px;
+            vertical-align: top;
+            margin-bottom: 35px; }
+            .block_for_clients .right .block .line2 .row .item .name {
+              font-size: 13px;
+              font-weight: 700;
+              margin-bottom: 10px;
+              line-height: 20px; }
+            .block_for_clients .right .block .line2 .row .item .result {
+              font-family: 'Museo Cyrl 700';
+              font-size: 26px; }
+            .block_for_clients .right .block .line2 .row .item:last-child {
+              margin-right: 0; }
+        .block_for_clients .right .block .line2 .btn {
+          display: inline-block;
+          text-decoration: none;
+          color: #fff;
+          font-size: 17px;
+          font-weight: 800;
+          letter-spacing: 0.3px;
+          padding: 0px 50px;
+          line-height: 64px;
+          box-shadow: 0 21px 31px 1px rgba(255, 0, 103, 0.25), 0 6px 10px 1px rgba(255, 0, 120, 0.3);
+          border-radius: 32px;
+          background-color: #ed0f69;
+          transition: .2s; }
+          .block_for_clients .right .block .line2 .btn:hover {
+            background-color: #d60d5e; }
+      .block_for_clients .right .block .special {
+        width: 472px;
+        height: 310px;
+        background: #b2d234 url("../images/gift.svg") no-repeat 40px 48px;
+        padding-top: 50px;
+        padding-left: 125px;
+        padding-right: 50px;
+        color: #fff;
+        position: relative;
+        margin-top: -350px;
+        margin-left: -430px;
+        z-index: 2; }
+        .block_for_clients .right .block .special:after {
+          content: '';
+          display: block;
+          border: 20px solid transparent;
+          border-top: 20px solid #b2d234;
+          border-right: 20px solid #b2d234;
+          position: absolute;
+          bottom: -40px;
+          right: 0; }
+        .block_for_clients .right .block .special.anime:before {
+          content: '';
+          width: 113px;
+          height: 195px;
+          display: block;
+          background: url("../images/chiken.png") no-repeat;
+          position: absolute;
+          left: -113px;
+          top: 87px;
+          z-index: 1;
+          animation: chiken 1s ease-in-out; }
+        .block_for_clients .right .block .special .name {
+          font-family: "Museo Cyrl 700";
+          font-size: 30px; }
+        .block_for_clients .right .block .special .text1 {
+          font-weight: 800;
+          font-size: 20px;
+          margin-top: 15px;
+          margin-bottom: 15px; }
+        .block_for_clients .right .block .special .text2 {
+          font-size: 15px;
+          font-weight: 700; }
+        .block_for_clients .right .block .special .price {
+          font-size: 46px;
+          font-family: "Museo Cyrl 700";
+          margin-top: 20px; }
+
+.subscriber {
+  margin-top: -10px; }
+  .subscriber .block {
+    width: 1245px;
+    height: 374px;
+    box-shadow: 0 37px 56px 1px rgba(0, 28, 60, 0.13);
+    border: 1px solid #fff;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px; }
+    .subscriber .block.anime:before {
+      content: '';
+      width: 0px;
+      height: 369px;
+      display: block;
+      background: url("../images/chiken_big.png") no-repeat;
+      position: absolute;
+      left: 0px;
+      top: 12px;
+      z-index: 1;
+      animation: chiken_big 1s ease-in-out forwards; }
+    .subscriber .block .item1 {
+      padding-left: 85px;
+      padding-top: 75px; }
+      .subscriber .block .item1 .title {
+        font-family: "Museo Cyrl 700";
+        font-size: 40px; }
+      .subscriber .block .item1 .text {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 20px 0px; }
+      .subscriber .block .item1 form {
+        display: block;
+        width: 100%;
+        max-width: 530px;
+        position: relative;
+        height: 64px;
+        border: 2px solid #ebebeb;
+        border-radius: 32px; }
+        .subscriber .block .item1 form input[type=text] {
+          outline: none;
+          border: none;
+          width: 280px;
+          height: 64px;
+          background: none;
+          margin-left: 40px;
+          font-size: 17px;
+          font-family: 'Lato', sans-serif; }
+        .subscriber .block .item1 form input[type=submit] {
+          outline: none;
+          border: none;
+          width: 214px;
+          height: 64px;
+          box-shadow: 0 21px 31px 1px rgba(255, 0, 103, 0.25), 0 6px 10px 1px rgba(255, 0, 120, 0.3);
+          border-radius: 32px;
+          background-color: #ed0f69;
+          font-size: 17px;
+          font-weight: 600;
+          color: #fff;
+          letter-spacing: 0.3px;
+          position: absolute;
+          right: -2px;
+          top: -2px;
+          cursor: pointer;
+          transition: .2s; }
+          .subscriber .block .item1 form input[type=submit]:hover {
+            background-color: #d60d5e; }
+    .subscriber .block .item2 {
+      position: absolute;
+      right: 0;
+      top: 0; }
+      .subscriber .block .item2 .utka {
+        top: -40px;
+        right: 120px;
+        position: absolute; }
+        .subscriber .block .item2 .utka.anime {
+          animation: utka 1s ease-in-out forwards; }
+      .subscriber .block .item2 .journal {
+        position: absolute;
+        top: -65px;
+        right: 79px; }
+      .subscriber .block .item2 .price {
+        text-shadow: 0 37px 56px rgba(0, 28, 60, 0.32);
+        color: #fefefe;
+        font-size: 245px;
+        font-family: "Museo Cyrl 700";
+        position: absolute;
+        z-index: 3;
+        top: 170px;
+        right: 119px; }
+        .subscriber .block .item2 .price .special {
+          width: 143px;
+          height: 40px;
+          background-color: #b2d234;
+          color: #fff;
+          font-size: 18px;
+          font-family: 'Lato', sans-serif;
+          text-align: center;
+          line-height: 40px;
+          margin-left: 100px;
+          margin-bottom: -70px;
+          position: relative;
+          z-index: 1; }
+          .subscriber .block .item2 .price .special:before {
+            content: '';
+            display: block;
+            border: 7px solid transparent;
+            border-left: 7px solid #b2d234;
+            border-top: 7px solid #b2d234;
+            position: absolute;
+            bottom: -14px;
+            left: 0; }
+
+@keyframes chiken {
+  0% {
+    width: 0;
+    left: 0; }
+  100% {
+    width: 113px;
+    left: -113px; } }
+
+@keyframes chiken_big {
+  0% {
+    width: 0;
+    left: 0; }
+  100% {
+    width: 119px;
+    left: -119px; } }
+
+@keyframes utka {
+  0% {
+    right: 70px; }
+  100% {
+    right: -80px; } }
+
+.inpdf_block {
+  height: 780px; }
+  .inpdf_block .round {
+    width: 797px;
+    height: 797px;
+    background-color: #fff3e1;
+    border-radius: 50%;
+    margin-top: -80px;
+    margin-left: -100px;
+    position: absolute; }
+  .inpdf_block .content {
+    position: relative;
+    z-index: 1; }
+    .inpdf_block .content .journal {
+      width: 670px;
+      float: left;
+      padding-top: 60px;
+      margin-left: -50px;
+      position: relative; }
+      .inpdf_block .content .journal .info {
+        width: 168px;
+        height: 168px;
+        box-shadow: 0 21px 31px 1px rgba(255, 0, 103, 0.25), 0 6px 10px 1px rgba(255, 0, 120, 0.3);
+        border-radius: 84px;
+        border: 1px solid #cf1460;
+        background-color: #ed0f69;
+        text-align: center;
+        color: #fff;
+        font-family: "Museo Cyrl 700";
+        font-size: 29px;
+        line-height: 35px;
+        padding-top: 30px;
+        position: absolute;
+        top: 130px;
+        right: 80px; }
+        .inpdf_block .content .journal .info span {
+          display: block;
+          font-size: 12px;
+          margin-bottom: -10px; }
+    .inpdf_block .content .text {
+      float: left;
+      max-width: 370px;
+      padding-top: 170px; }
+      .inpdf_block .content .text .title {
+        font-family: "Museo Cyrl 700";
+        font-size: 40px;
+        margin-bottom: 30px; }
+      .inpdf_block .content .text p {
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        margin-top: 10px; }
+      .inpdf_block .content .text ul {
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+        .inpdf_block .content .text ul li {
+          background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAACCAYAAACOoybuAAAAGklEQVQYV2N8y59xgYGBUZ+BMLjASLzi/xcBXdcHa7atG4AAAAAASUVORK5CYII=") no-repeat left 12px;
+          padding-left: 20px;
+          line-height: 24px; }
+      .inpdf_block .content .text .btn {
+        margin-top: 20px;
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 800;
+        letter-spacing: 0.3px;
+        padding: 0px 50px;
+        line-height: 64px;
+        box-shadow: 0 21px 31px 1px rgba(255, 0, 103, 0.25), 0 6px 10px 1px rgba(255, 0, 120, 0.3);
+        border-radius: 32px;
+        background-color: #ed0f69;
+        transition: .2s; }
+        .inpdf_block .content .text .btn:hover {
+          background-color: #d60d5e; }
+  .inpdf_block .container {
+    position: relative; }
+  .inpdf_block .pages {
+    position: absolute;
+    right: 0;
+    top: 180px;
+    z-index: 2;
+    width: 100px;
+    text-align: center; }
+    .inpdf_block .pages .item {
+      display: inline-block;
+      color: #c9c9c9;
+      text-decoration: none;
+      font-size: 14px;
+      font-family: "Museo Cyrl 500";
+      line-height: 36px;
+      color: #000;
+      border-radius: 19px;
+      padding: 0px 15px;
+      transition: .2s;
+      margin-bottom: 1px; }
+      .inpdf_block .pages .item.active, .inpdf_block .pages .item:hover {
+        background-color: #ed0f69;
+        color: #fff; }
+      .inpdf_block .pages .item.disable {
+        color: #c9c9c9;
+        cursor: default; }
+        .inpdf_block .pages .item.disable:hover {
+          background: none;
+          color: #c9c9c9; }
+
+.partners_block {
+  margin-top: 40px;
+  position: relative; }
+  .partners_block .title {
+    font-family: "Museo Cyrl 700";
+    font-size: 40px;
+    margin-bottom: 50px; }
+  .partners_block .slides a {
+    display: inline-block;
+    width: 357px;
+    background-color: #ebebeb;
+    padding: 18px;
+    display: block;
+    margin-right: 10px; }
+    .partners_block .slides a img {
+      width: initial;
+      display: initial; }
+  .partners_block .slides .owl-dots {
+    position: absolute;
+    top: -70px;
+    right: 25px;
+    text-align: right; }
+    .partners_block .slides .owl-dots .owl-dot {
+      width: 33px;
+      height: 7px;
+      border-radius: 4px;
+      background-color: #e1e1e1;
+      display: inline-block;
+      margin-left: 16px;
+      transition: .2s; }
+      .partners_block .slides .owl-dots .owl-dot:hover, .partners_block .slides .owl-dots .owl-dot.active {
+        background-color: #ed0f69; }
+  .partners_block .slides .owl-nav .owl-prev {
+    width: 108px;
+    height: 108px;
+    box-shadow: 0 14px 31px 1px rgba(0, 28, 60, 0.25);
+    background: #fff url("../images/partners_arr.png") no-repeat center center;
+    display: block;
+    left: 0;
+    margin-left: -35px;
+    position: absolute;
+    top: 200px;
+    transition: .2s; }
+    .partners_block .slides .owl-nav .owl-prev:hover {
+      background-color: #f5f5f5; }
+  .partners_block .slides .owl-nav .owl-next {
+    width: 108px;
+    height: 108px;
+    box-shadow: 0 14px 31px 1px rgba(0, 28, 60, 0.25);
+    background: #fff url("../images/partners_arr.png") no-repeat center center;
+    transform: scale(-1, 1);
+    display: block;
+    right: 0;
+    margin-right: -25px;
+    position: absolute;
+    top: 200px;
+    transition: .2s; }
+    .partners_block .slides .owl-nav .owl-next:hover {
+      background-color: #f5f5f5; }
+
+.news_block {
+  margin-top: 40px;
+  position: relative; }
+  .news_block .title {
+    font-family: "Museo Cyrl 700";
+    font-size: 40px;
+    margin-bottom: 50px; }
+  .news_block .items .item {
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    color: #000;
+    margin-right: 25px;
+    margin-bottom: 40px;
+    vertical-align: top;
+    transition: .2s; }
+    .news_block .items .item img {
+      max-width: 100%; }
+    .news_block .items .item.type_1 {
+      padding: 25px;
+      width: 260px;
+      border: 1px solid #e3e3e3; }
+      .news_block .items .item.type_1 .date {
+        color: #ed0f69;
+        font-size: 16px;
+        line-height: 23px; }
+        .news_block .items .item.type_1 .date span {
+          font-size: 30px;
+          font-weight: 700;
+          display: block;
+          line-height: 30px;
+          margin-bottom: 5px; }
+      .news_block .items .item.type_1 .name {
+        margin-top: 10px;
+        font-size: 21px;
+        font-family: "Museo Cyrl 700";
+        line-height: 28px; }
+      .news_block .items .item.type_1 p {
+        font-size: 14px;
+        line-height: 22px; }
+    .news_block .items .item.type_2 {
+      width: 260px;
+      border: 1px solid #fff; }
+      .news_block .items .item.type_2 .name {
+        margin-top: 10px;
+        font-size: 21px;
+        font-family: "Museo Cyrl 700";
+        line-height: 28px;
+        padding-left: 20px; }
+      .news_block .items .item.type_2 .date {
+        color: #b6b6b6;
+        font-size: 15px;
+        margin-top: 15px;
+        padding-left: 20px; }
+      .news_block .items .item.type_2 p {
+        font-size: 14px;
+        line-height: 22px;
+        padding-left: 20px;
+        display: block; }
+    .news_block .items .item.type_3 {
+      width: 560px;
+      border: 1px solid #e3e3e3; }
+      .news_block .items .item.type_3 .content {
+        position: relative;
+        padding-left: 102px;
+        padding-right: 20px; }
+      .news_block .items .item.type_3 .name {
+        margin-top: 10px;
+        font-size: 23px;
+        font-family: "Museo Cyrl 700";
+        line-height: 30px; }
+      .news_block .items .item.type_3 .date {
+        color: #ed0f69;
+        font-size: 16px;
+        line-height: 23px;
+        position: absolute;
+        top: 5px;
+        left: 20px; }
+        .news_block .items .item.type_3 .date span {
+          font-size: 30px;
+          font-weight: 700;
+          display: block;
+          line-height: 30px;
+          margin-bottom: 5px; }
+      .news_block .items .item.type_3 p {
+        font-size: 14px;
+        line-height: 22px;
+        display: block; }
+    .news_block .items .item:nth-child(1) {
+      background-color: #ed0f69;
+      color: #fff; }
+      .news_block .items .item:nth-child(1) .date {
+        color: #fff; }
+    .news_block .items .item:nth-child(3n+3) {
+      margin-right: 0; }
+    .news_block .items .item:hover {
+      border: 1px solid #ccc; }
+  .news_block a.more {
+    display: block;
+    line-height: 86px;
+    border: 1px solid #e3e3e3;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Museo Cyrl 700";
+    color: #000;
+    font-size: 23px;
+    transition: .2s; }
+    .news_block a.more:hover {
+      background: #f5f5f5; }
+
+.agro_press_block {
+  margin: 60px 0px 40px; }
+  .agro_press_block .block {
+    width: 1307px;
+    height: 387px;
+    border-radius: 10px;
+    background-color: #434350;
+    margin: 0 auto; }
+  .agro_press_block .container {
+    position: relative; }
+  .agro_press_block .content {
+    color: #fff;
+    padding-top: 60px;
+    position: relative;
+    z-index: 2; }
+    .agro_press_block .content .title {
+      margin-top: 20px;
+      color: #fefeff;
+      font-family: "Museo Cyrl 700";
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 36px; }
+    .agro_press_block .content p {
+      font-size: 15px;
+      line-height: 22px; }
+    .agro_press_block .content .btn {
+      margin-top: 10px;
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      padding: 0px 40px;
+      line-height: 50px;
+      box-shadow: 0 21px 31px 1px rgba(255, 0, 103, 0.42);
+      border-radius: 25px;
+      background-color: #ed0f69;
+      transition: .2s; }
+      .agro_press_block .content .btn:hover {
+        background-color: #d60d5e; }
+  .agro_press_block .bg {
+    position: absolute;
+    top: -22px;
+    right: -45px; }
+
+.partners_block_logos {
+  margin-top: 60px;
+  position: relative; }
+  .partners_block_logos .title {
+    font-family: "Museo Cyrl 700";
+    font-size: 40px;
+    margin-bottom: 50px; }
+  .partners_block_logos .slides a {
+    display: inline-block;
+    width: 193px;
+    padding: 18px;
+    border: 1px solid #ebebeb;
+    display: block;
+    transition: .2s; }
+    .partners_block_logos .slides a img {
+      width: initial;
+      display: initial; }
+    .partners_block_logos .slides a:hover {
+      border: 1px solid #ccc; }
+  .partners_block_logos .slides .owl-dots {
+    position: absolute;
+    top: -70px;
+    right: 35px;
+    text-align: right; }
+    .partners_block_logos .slides .owl-dots .owl-dot {
+      width: 33px;
+      height: 7px;
+      border-radius: 4px;
+      background-color: #e1e1e1;
+      display: inline-block;
+      margin-left: 16px;
+      transition: .2s; }
+      .partners_block_logos .slides .owl-dots .owl-dot:hover, .partners_block_logos .slides .owl-dots .owl-dot.active {
+        background-color: #ed0f69; }
+
+.on_fb_block {
+  margin-top: 60px;
+  margin-bottom: 50px; }
+  .on_fb_block .cols {
+    display: table;
+    width: 100%; }
+    .on_fb_block .cols .col {
+      display: table-cell;
+      vertical-align: middle; }
+      .on_fb_block .cols .col:nth-child(1) {
+        width: 600px; }
+      .on_fb_block .cols .col .title {
+        color: #010101;
+        font-family: "Museo Cyrl 700";
+        font-size: 40px;
+        line-height: 65.87px; }
+      .on_fb_block .cols .col p {
+        font-size: 20px;
+        line-height: 30px; }
+
+.line {
+  height: 1px;
+  background-color: #ebebeb;
+  margin: 50px 0px; }
+
+.contacts_block {
+  margin-top: 50px;
+  position: relative; }
+  .contacts_block .title {
+    font-family: "Museo Cyrl 700";
+    font-size: 40px;
+    margin-bottom: 20px; }
+  .contacts_block .cols {
+    display: table;
+    width: 100%; }
+    .contacts_block .cols .col {
+      display: table-cell;
+      padding: 0px 25px;
+      vertical-align: top; }
+      .contacts_block .cols .col:first-child {
+        padding-left: 0; }
+      .contacts_block .cols .col:last-child {
+        padding-right: 0; }
+      .contacts_block .cols .col .item {
+        min-height: 36px;
+        vertical-align: middle;
+        margin-bottom: 15px;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 16px; }
+        .contacts_block .cols .col .item .name {
+          font-size: 12px;
+          line-height: 30px;
+          font-weight: 400;
+          min-height: 30px; }
+        .contacts_block .cols .col .item span {
+          display: inline;
+          vertical-align: middle; }
+        .contacts_block .cols .col .item a.mail {
+          color: #ed0f69;
+          text-decoration: none;
+          outline: none;
+          display: inline-block;
+          font-size: 18px;
+          font-weight: 800; }
+
+.map {
+  margin-top: 50px; }
+
+footer .menu {
+  display: table;
+  width: 100%;
+  line-height: 63px;
+  border-bottom: 1px solid #ebebeb;
+  padding: 0px 20px; }
+  footer .menu .item {
+    display: table-cell;
+    padding: 0px 10px;
+    text-decoration: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000; }
+
+footer .cols {
+  display: table;
+  width: 100%;
+  padding: 25px 0px; }
+  footer .cols .col {
+    display: table-cell;
+    padding: 0px 25px;
+    vertical-align: middle; }
+    footer .cols .col .copy {
+      font-size: 13px;
+      font-weight: 500;
+      padding-left: 85px;
+      margin: 0;
+      margin-top: 5px; }
+    footer .cols .col .tel {
+      text-decoration: none;
+      color: #000;
+      outline: none;
+      font-size: 24px;
+      font-weight: 800; }
+    footer .cols .col .callback {
+      text-decoration: none;
+      color: #000;
+      outline: none;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      font-weight: 700;
+      margin-top: 8px;
+      display: inline-block; }
+    footer .cols .col .btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      padding: 0px 35px;
+      line-height: 50px;
+      box-shadow: 0 21px 31px 1px rgba(255, 0, 103, 0.42);
+      border-radius: 25px;
+      background-color: #ed0f69;
+      transition: .2s; }
+      footer .cols .col .btn:hover {
+        background-color: #d60d5e; }
+    footer .cols .col .author img {
+      transition: .2s;
+      opacity: 0.35;
+      max-width: 140px; }
+    footer .cols .col .author:hover img {
+      transition: .2s;
+      opacity: 1; }
+
+/* Large desktop */
+@media (min-width: 980px) and (max-width: 1025px) {
+  .container {
+    width: 990px; }
+  header .menu .item {
+    white-space: nowrap;
+    padding: 0px 17px; }
+  header .menu .item:last-child {
+    padding-right: 18px !important; }
+  .slider .slide {
+    overflow-x: hidden; }
+  #scene {
+    overflow: hidden; }
+  .slider .slide .slide1 img.top {
+    left: -200px; }
+  .slider .slide .slide1 {
+    overflow-x: hidden;
+    height: 570px; }
+  .about .bg1 {
+    left: -480px; }
+  .block_for_clients .bg1 {
+    left: -580px; }
+  .block_for_clients .right .block .special {
+    width: 370px;
+    height: 360px;
+    margin-left: -320px;
+    margin-top: -400px;
+    padding-left: 115px;
+    background: url(../images/gift.svg) 33px 48px no-repeat #b2d234; }
+  .subscriber .container {
+    width: 100%; }
+  .subscriber .block {
+    width: 100%; }
+  .subscriber .block.anime:before {
+    display: none; }
+  .subscriber .block .item1 {
+    padding-left: 20px; }
+  .subscriber .block .item2 .journal {
+    right: -60px; }
+  .subscriber .block .item2 .price {
+    right: 20px;
+    font-size: 215px; }
+  .subscriber .block .item2 .utka.anime {
+    display: none; }
+  .inpdf_block .content .journal {
+    width: 570px; }
+    .inpdf_block .content .journal img {
+      margin-left: -60px; }
+  .partners_block .slides a {
+    width: 310px; }
+    .partners_block .slides a img {
+      max-width: 100%; }
+  .partners_block .owl-nav {
+    display: none; }
+  .news_block .items .item.type_3 {
+    width: 410px; }
+  .agro_press_block .block {
+    border-radius: 0px; }
+  .agro_press_block .block {
+    width: 100%; }
+  .agro_press_block .content {
+    padding-left: 40px; }
+  .agro_press_block .bg {
+    right: -225px; }
+  .contacts_block .cols .col {
+    padding: 0px 10px; }
+  footer .cols .col:first-child {
+    padding-left: 0; }
+  footer .cols .col .tel {
+    white-space: nowrap; }
+  footer .cols .col .btn {
+    white-space: nowrap; }
+  footer .cols .col {
+    padding: 0px 10px; }
+  .about .right {
+    padding-right: 15px; } }
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .container {
+    width: 768px;
+    padding: 0px 20px; }
+  header .menu .item {
+    white-space: nowrap;
+    padding: 0px 11px;
+    font-size: 14px; }
+  header .menu .item:last-child {
+    padding-right: 5px !important;
+    width: 10px;
+    overflow: hidden;
+    font-size: 0px;
+    height: 56px;
+    background: url(../images/fb.svg) 23px 13px no-repeat #235b9e; }
+  header .menu {
+    height: 56px; }
+  .slider .slide {
+    overflow-x: hidden; }
+  #scene {
+    overflow: hidden; }
+  .slider .slide .slide1 img.top {
+    left: -340px; }
+  .slider .slide .slide1 {
+    overflow-x: hidden;
+    height: 570px; }
+  header .order .btn {
+    display: none; }
+  .slider .slide .slide1 .text2 {
+    font-size: 74px; }
+  .slider .slide .slide_content {
+    padding-top: 95px; }
+  .about .right {
+    width: 430px; }
+  .about .bg1 {
+    left: -540px;
+    top: -10px; }
+  .about .right .table .item {
+    padding-right: 20px; }
+  .about .right .table .item .result {
+    font-size: 37px; }
+  .block_for_clients .right {
+    width: 510px; }
+  .block_for_clients .right .block {
+    width: 510px;
+    margin-left: 0;
+    right: -30px;
+    padding-right: 20px; }
+  .block_for_clients .bg1 {
+    left: -580px;
+    top: 50px; }
+  .block_for_clients .right .title {
+    font-size: 37px;
+    padding-left: 110px; }
+  .block_for_clients .right p {
+    padding-left: 110px; }
+  .block_for_clients .right .block .line1 .title .text {
+    width: 280px; }
+  .block_for_clients .right .block .line1 .row .item {
+    margin-bottom: 20px;
+    margin-right: 25px; }
+  .block_for_clients .right .block .line1 .row .item .result {
+    font-size: 36px; }
+  .block_for_clients .right .block .line1 {
+    margin-bottom: 20px; }
+  .block_for_clients .right .block .line2 .title {
+    padding-left: 0px; }
+  .block_for_clients .right .block .line2 .row .item {
+    margin-right: 0;
+    width: 177px;
+    margin-right: 20px;
+    margin-bottom: 25px; }
+    .block_for_clients .right .block .line2 .row .item:nth-child(2n+2) {
+      margin-right: 0; }
+  .block_for_clients .right .block .special {
+    width: 320px;
+    margin-left: -280px;
+    padding-top: 100px;
+    padding-left: 30px;
+    background: url(../images/gift.svg) 40px 30px no-repeat #b2d234;
+    height: 400px;
+    margin-top: -440px; }
+  .block_for_clients .right .block .special .text2 {
+    line-height: 22px; }
+  .subscriber .container {
+    width: 100%;
+    padding: 0px; }
+  .subscriber .block.anime:before {
+    display: none; }
+  .subscriber .block .item1 {
+    padding-left: 20px; }
+  .subscriber .block .item1 form {
+    max-width: 510px; }
+  .subscriber .block .item2 .utka.anime,
+  .subscriber .block .item2 .price {
+    display: none; }
+  .subscriber .block {
+    width: 100%; }
+  .subscriber .block .item2 .journal {
+    top: -35px;
+    right: -251px; }
+  .inpdf_block .pages {
+    right: 20px; }
+  .inpdf_block .content .text {
+    float: none;
+    max-width: 100%; }
+  .inpdf_block {
+    height: initial; }
+  .partners_block .slides a {
+    width: 310px;
+    margin-right: 0;
+    display: inline-block; }
+    .partners_block .slides a img {
+      max-width: 100%; }
+  .partners_block .slides {
+    margin-right: -20px;
+    margin-left: -20px;
+    text-align: center;
+    width: initial; }
+  .news_block .items .item {
+    margin-right: 30px; }
+  .news_block .items .item.type_1,
+  .news_block .items .item.type_2 {
+    width: 345px; }
+    .news_block .items .item.type_1 img,
+    .news_block .items .item.type_2 img {
+      width: 100%; }
+  .news_block .items .item.type_3 {
+    width: 100%; }
+    .news_block .items .item.type_3 img {
+      width: 100%; }
+  .news_block .items .item:nth-child(2n+2) {
+    margin-right: 0; }
+  .news_block .items .item.type_1 p,
+  .news_block .items .item.type_2 p,
+  .news_block .items .item.type_1 .name,
+  .news_block .items .item.type_2 .name {
+    padding-right: 10px; }
+  .agro_press_block .block {
+    width: 100%;
+    border-radius: 0px; }
+    .agro_press_block .block .bg {
+      display: none; }
+    .agro_press_block .block .content {
+      text-align: center; }
+      .agro_press_block .block .content p br {
+        display: none; }
+  .on_fb_block .cols .col {
+    width: 50% !important; }
+    .on_fb_block .cols .col:first-child {
+      padding-right: 20px; }
+    .on_fb_block .cols .col img {
+      max-width: 100%; }
+  .contacts_block .cols {
+    display: block; }
+    .contacts_block .cols .col {
+      display: block;
+      width: 50%;
+      float: left;
+      margin-bottom: 30px; }
+      .contacts_block .cols .col:nth-child(2), .contacts_block .cols .col:nth-child(4) {
+        padding-right: 0; }
+      .contacts_block .cols .col:nth-child(3) {
+        padding-left: 0; }
+  footer .menu .item {
+    white-space: nowrap;
+    font-size: 14px; }
+  footer .cols .col .logo {
+    display: none; }
+  footer .cols .col:nth-child(3) {
+    display: none; }
+  footer .cols .col:nth-child(2) {
+    text-align: center; }
+  footer .cols .col .copy {
+    padding-left: 0; }
+  .about .right .round {
+    left: -336px; } }
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  #mmenu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9;
+    text-align: center;
+    padding-top: 60px;
+    display: none; }
+    #mmenu .menu {
+      display: inline-block; }
+      #mmenu .menu .item {
+        text-decoration: none;
+        display: block;
+        color: #000;
+        font-size: 20px;
+        margin: 20px 0px; }
+    #mmenu .close {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      width: 25px;
+      height: 25px; }
+  header .mmenu {
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+    padding: 10px; }
+    header .mmenu svg {
+      position: relative;
+      top: 1px; }
+  .top_bg {
+    background: url("../images/m_bg.png") no-repeat top center;
+    background-size: cover; }
+  .container {
+    width: 100%;
+    max-width: 375px;
+    padding: 0px 15px; }
+  .slider .slide {
+    overflow-x: hidden;
+    height: initial; }
+  #scene {
+    display: none; }
+  .slider .slide .slide1 img.top {
+    left: -340px; }
+  .slider .slide .slide1 {
+    overflow-x: hidden;
+    height: 570px;
+    height: initial; }
+  header .cols {
+    display: block; }
+  header .logo {
+    margin-right: 0; }
+    header .logo img {
+      max-width: 200px; }
+  header .lang {
+    display: none; }
+  header .order {
+    display: none; }
+  header .tel {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 15px; }
+    header .tel .number {
+      font-size: 25px;
+      font-weight: 500;
+      margin-top: 20px; }
+    header .tel .callback {
+      display: none; }
+  header .menu {
+    display: none; }
+  .slider .slide .slide_content {
+    padding-top: 30px;
+    text-align: center;
+    position: initial; }
+    .slider .slide .slide_content img {
+      display: none !important; }
+    .slider .slide .slide_content .text1 {
+      font-size: 16px;
+      max-width: 300px;
+      display: inline-block;
+      line-height: 25.39px; }
+    .slider .slide .slide_content .text2 {
+      font-size: 33px;
+      text-shadow: 0 14px 31px rgba(0, 28, 60, 0.61);
+      margin-top: 10px;
+      margin-bottom: 20px; }
+    .slider .slide .slide_content .text3 {
+      font-size: 18px; }
+  .slider .owl-nav {
+    display: none; }
+  .slider .slide .slide1 .btn {
+    margin-top: 20px; }
+  .about {
+    background: #fff;
+    margin-top: 30px; }
+  .about .bg1,
+  .about .right .bg2,
+  .block_for_clients .bg1,
+  .about .right .round {
+    display: none; }
+  .slider .slide {
+    padding-bottom: 80px; }
+  .slider .owl-dots {
+    bottom: 30px; }
+  .about .right {
+    width: 100%; }
+    .about .right p {
+      font-size: 14px; }
+    .about .right ul li {
+      font-size: 14px; }
+  .about .right .title {
+    font-size: 30px; }
+  .about .right .table .item .result {
+    font-size: 23px; }
+  .block_for_clients .right {
+    width: 100%; }
+  .block_for_clients .right .title {
+    font-size: 28px; }
+  .block_for_clients .right p {
+    font-size: 14px;
+    line-height: 24px; }
+  .block_for_clients {
+    margin-top: 40px; }
+  .about .right .table .item {
+    padding-right: 20px; }
+  .block_for_clients .right .block {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px; }
+    .block_for_clients .right .block .line1 {
+      margin-bottom: 30px; }
+      .block_for_clients .right .block .line1 .title {
+        padding-left: 0; }
+        .block_for_clients .right .block .line1 .title .text {
+          margin-left: 0;
+          font-size: 25px;
+          margin-top: 10px; }
+      .block_for_clients .right .block .line1 .row {
+        padding-left: 0; }
+        .block_for_clients .right .block .line1 .row .item {
+          width: 49%;
+          margin-right: 0;
+          margin-bottom: 15px; }
+    .block_for_clients .right .block .line_arr {
+      margin-left: 0; }
+    .block_for_clients .right .block .line2 {
+      margin-top: 30px;
+      padding-left: 0; }
+      .block_for_clients .right .block .line2 .title {
+        font-size: 25px; }
+      .block_for_clients .right .block .line2 .row {
+        padding-left: 0; }
+        .block_for_clients .right .block .line2 .row .item {
+          width: 49%;
+          margin-right: 0;
+          padding-right: 15px;
+          margin-bottom: 15px; }
+          .block_for_clients .right .block .line2 .row .item:nth-child(2n+2) {
+            padding-right: 0; }
+          .block_for_clients .right .block .line2 .row .item .name br {
+            display: none; }
+      .block_for_clients .right .block .line2 .btn {
+        font-size: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 40px; }
+        .block_for_clients .right .block .line2 .btn:before {
+          content: 'Заказать рекламу';
+          font-size: 16px; }
+      .block_for_clients .right .block .line2:after {
+        display: block;
+        content: '';
+        height: 36px;
+        background: #fff;
+        border-top: 6px solid #ebebeb;
+        margin-left: -26px;
+        margin-right: -26px; }
+    .block_for_clients .right .block .special {
+      position: initial;
+      margin-top: 0px;
+      margin-left: 0;
+      width: 100%;
+      margin-left: -26px;
+      margin-right: -26px;
+      width: initial;
+      padding: 40px;
+      padding-top: 100px;
+      background: url(../images/gift.svg) 40px 30px no-repeat #b2d234;
+      height: initial; }
+      .block_for_clients .right .block .special.anime:before {
+        display: none; }
+  .subscriber {
+    margin-top: -30px; }
+  .subscriber .block {
+    width: initial;
+    margin-left: -26px;
+    margin-right: -26px;
+    height: initial;
+    box-shadow: none; }
+    .subscriber .block .item1 {
+      margin-top: 350px;
+      padding: 0;
+      text-align: center;
+      box-shadow: 0 23px 56px 1px rgba(0, 28, 60, 0.13);
+      margin-left: 26px;
+      margin-right: 26px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 120px;
+      border-radius: 0px 0px 10px 10px; }
+      .subscriber .block .item1 .title {
+        font-size: 25px; }
+      .subscriber .block .item1 .text {
+        font-size: 14px;
+        line-height: 24px;
+        display: inline-block;
+        max-width: 300px; }
+        .subscriber .block .item1 .text br {
+          display: none; }
+      .subscriber .block .item1 form input[type=submit] {
+        right: 0;
+        width: 100%;
+        top: 80px; }
+    .subscriber .block .item2 {
+      position: relative; }
+      .subscriber .block .item2 .utka.anime {
+        display: none; }
+      .subscriber .block .item2 .journal {
+        width: 290px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: -660px; }
+      .subscriber .block .item2 .price {
+        display: none; }
+  .inpdf_block {
+    height: initial; }
+    .inpdf_block .content .text {
+      float: none; }
+  .partners_block {
+    margin-top: 30px; }
+    .partners_block .title {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 20px; }
+  .partners_block .slides {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: initial; }
+  .partners_block .slides a {
+    width: initial;
+    margin-right: 10px;
+    padding: 8px; }
+    .partners_block .slides a img {
+      max-width: 100%; }
+  .news_block .title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px; }
+  .news_block .items .item {
+    width: 100% !important; }
+    .news_block .items .item img {
+      width: 100%; }
+  .news_block a.more {
+    line-height: 72px;
+    font-size: 16px; }
+  .agro_press_block {
+    margin-top: 30px;
+    margin-bottom: 30px; }
+  .agro_press_block .block {
+    width: 100%;
+    border-radius: 0px;
+    background: none;
+    height: initial;
+    padding-bottom: 0px; }
+    .agro_press_block .block .bg {
+      display: none; }
+    .agro_press_block .block .content {
+      text-align: center;
+      background-color: #434350;
+      border-radius: 10px;
+      padding-bottom: 60px; }
+      .agro_press_block .block .content p br {
+        display: none; }
+      .agro_press_block .block .content .title {
+        font-size: 20px;
+        line-height: 28px; }
+  .partners_block_logos {
+    margin-top: 30px; }
+    .partners_block_logos .title {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 20px; }
+    .partners_block_logos .slides {
+      margin-left: -15px;
+      margin-right: -15px;
+      width: initial; }
+      .partners_block_logos .slides a {
+        width: initial;
+        padding: 6px;
+        margin: 0px 5px; }
+        .partners_block_logos .slides a img {
+          max-width: 100%; }
+  .on_fb_block .cols {
+    display: block;
+    text-align: center; }
+  .on_fb_block .cols .col {
+    width: 100% !important;
+    display: block; }
+    .on_fb_block .cols .col:first-child {
+      padding-right: 0px; }
+    .on_fb_block .cols .col img {
+      max-width: 100%; }
+    .on_fb_block .cols .col .title {
+      font-size: 30px;
+      line-height: 40px; }
+    .on_fb_block .cols .col p {
+      font-size: 15px;
+      line-height: 24px; }
+  .contacts_block .title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0px; }
+  .contacts_block .cols {
+    display: block; }
+    .contacts_block .cols .col {
+      display: block;
+      padding: 0;
+      text-align: center;
+      margin-bottom: 20px; }
+  .contacts_block, .map {
+    margin-top: 30px; }
+  footer .menu {
+    display: none; }
+  footer .cols {
+    display: block;
+    text-align: center; }
+    footer .cols .col {
+      display: block; }
+      footer .cols .col:nth-child(1) {
+        display: none; }
+      footer .cols .col .callback {
+        display: none; }
+      footer .cols .col .btn {
+        margin: 20px 0px; }
+  .subscriber .block .item2 .utka {
+    display: none; }
+  .inpdf_block .content .journal {
+    width: 100%;
+    margin-left: 0; }
+    .inpdf_block .content .journal img {
+      max-width: 100%;
+      margin-top: -70px; }
+  .inpdf_block {
+    margin-top: 40px; }
+  .inpdf_block .pages {
+    display: none; }
+  .inpdf_block .round {
+    width: 290px;
+    height: 290px;
+    margin-left: 0;
+    margin-top: 0;
+    margin: 0 auto;
+    position: initial; }
+  .inpdf_block .content {
+    margin-top: -300px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: url("../images/about_bg_2.png") no-repeat top center; }
+  .inpdf_block .content .journal .info {
+    width: 115px;
+    height: 115px;
+    top: -10px;
+    right: 30px;
+    font-size: 20px;
+    line-height: 24.14px; }
+    .inpdf_block .content .journal .info span {
+      font-size: 9px;
+      margin-bottom: 0px;
+      line-height: 10px; }
+  .inpdf_block .content .text {
+    padding-top: 350px; }
+    .inpdf_block .content .text .title {
+      font-size: 30px; }
+  .inpdf_block .content .text .btn {
+    width: 100%;
+    text-align: center;
+    padding: 0; } }
+
+/* Landscape phones and down */
+
+/*# sourceMappingURL=main.css.map*/
